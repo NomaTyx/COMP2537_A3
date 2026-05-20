@@ -1,6 +1,7 @@
 let timeInterval = undefined;
 let difficulty = "medium";
 let timeRemaining = 60;
+let startingTime = 60;
 let numPairs = 3; // default to medium
 let powerUpUsed = false; // track if power-up has been used
 
@@ -11,7 +12,7 @@ let cardhtml = `<div class="card">
 
 async function setup() {
   powerUpUsed = false;
-  $("#timer").text(`${timeRemaining}`);
+  $("#timer").text(`${startingTime}`);
   clearInterval(timeInterval);
   $("gameover").hide();
   $("#start").show();
@@ -33,8 +34,8 @@ async function setup() {
       $("#total").text("2");
       $("#pairs").text("2");
       numPairs = 2;
-      timeRemaining = 70;
-      $("#timer").text(`${timeRemaining}`);
+      startingTime = 70;
+      $("#timer").text(`${startingTime}`);
       setup();
     });
 
@@ -48,8 +49,8 @@ async function setup() {
       $("#total").text("3");
       $("#pairs").text("3");
       numPairs = 3;
-      timeRemaining = 60;
-      $("#timer").text(`${timeRemaining}`);
+      startingTime = 60;
+      $("#timer").text(`${startingTime}`);
       setup();
     });
 
@@ -63,8 +64,8 @@ async function setup() {
       $("#total").text("4");
       $("#pairs").text("4");
       numPairs = 4;
-      timeRemaining = 10;
-      $("#timer").text(`${timeRemaining}`);
+      startingTime = 10;
+      $("#timer").text(`${startingTime}`);
       setup();
     });
 
