@@ -206,8 +206,8 @@ $(document).ready(() => {
       $("body").removeClass("bg-light text-dark").addClass("bg-dark text-light");
       $(".bg-white.border").removeClass("bg-white border").addClass("bg-secondary");
       $(".text-dark").removeClass("text-dark").addClass("text-light");
-      $("#restart").removeClass("btn-outline-light").addClass("btn-outline-dark");
-      $("#powerup").removeClass("btn-outline-light").addClass("btn-outline-dark");
+      $("#restart").removeClass("btn-outline-dark").addClass("btn-outline-light");
+      $("#powerup").removeClass("btn-outline-dark").addClass("btn-outline-light");
       $(this).text("🌙 Dark").removeClass("btn-outline-dark").addClass("btn-outline-light");
     }
   });
