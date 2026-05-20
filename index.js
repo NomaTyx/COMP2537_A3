@@ -12,6 +12,7 @@ let cardhtml = `<div class="card">
 
 async function setup() {
   powerUpUsed = false;
+  timeRemaining = startingTime;
   $("#timer").text(`${startingTime}`);
   clearInterval(timeInterval);
   $("gameover").hide();
