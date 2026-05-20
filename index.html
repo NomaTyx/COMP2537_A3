@@ -4,55 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Memory Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-    <!-- import jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js"></script>
   </head>
 
-  <body>
-    <div id="header">
-      <h1>Memory Game</h1>
-      Clicks: <span id="clicks">0</span> <br />
-      Pairs remaining: <span id="pairs">3</span> <br />
-      Pairs matched: <span id="matched">0</span> <br />
-      Total pairs: <span id="total">3</span> <br />
-      Difficulty:
-      <button id="easy">Easy</button>
-      <button id="medium" disabled="true">Medium</button>
-      <button id="hard">Hard</button>
-      <br />
-      <span id="timer">0</span> seconds remaining <br />
+  <body class="bg-dark text-light min-vh-100 d-flex flex-column align-items-center py-4">
+    <div class="container" style="max-width: 1000px">
+      <h1 class="text-center fw-bold mb-4" style="letter-spacing: 2px">Memory Game</h1>
+
+      <button
+        id="theme-toggle"
+        class="btn btn-outline-light btn-sm position-absolute top-0 end-0 m-3"
+      >
+        🌙 Dark
+      </button>
+      
+      <!-- Stats row -->
+      <div class="row g-2 mb-3 text-center">
+        <div class="col-4">
+          <div class="bg-secondary rounded p-2">
+            <div class="small text-light opacity-75">Clicks</div>
+            <div class="fs-4 fw-bold" id="clicks">0</div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="bg-secondary rounded p-2">
+            <div class="small text-light opacity-75">Remaining</div>
+            <div class="fs-4 fw-bold" id="pairs">3</div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="bg-secondary rounded p-2">
+            <div class="small text-light opacity-75">Matched</div>
+            <div class="fs-4 fw-bold" id="matched">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timer -->
+      <div class="text-center mb-3">
+        <span class="fs-5">
+          <span id="timer" class="fw-bold fs-3">60</span>
+          <span class="text-light opacity-75"> seconds remaining</span>
+        </span>
+      </div>
+
+      <!-- Difficulty buttons -->
+      <div class="d-flex justify-content-center gap-2 mb-4">
+        <button id="easy" class="btn btn-outline-success btn-sm">Easy</button>
+        <button id="medium" class="btn btn-outline-warning btn-sm" disabled>Medium</button>
+        <button id="hard" class="btn btn-outline-danger btn-sm">Hard</button>
+      </div>
+
+      <!-- Start / Restart -->
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <button id="start" class="btn btn-primary px-4">Start Game</button>
+        <button id="restart" class="btn btn-outline-light px-4">Restart</button>
+      </div>
+
+      <!-- Game grid -->
+      <div id="game_grid" class="d-flex flex-wrap justify-content-center gap-2 mb-4"></div>
+
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <button id="powerup" class="btn btn-outline-light px-4">Peek once</button>
+      </div>
+
+      <!-- Game over message -->
+      <h2 id="gameover" class="text-center text-danger fw-bold mt-3" style="display: none">
+        Game Over!
+      </h2>
     </div>
-    <button id="start">Start game</button>
-    <div id="game_grid">
-      <div class="card">
-        <img id="img1" class="front_face" src="001.png" alt="" />
-        <img class="back_face" src="back.webp" alt="" />
-      </div>
-      <div class="card">
-        <img id="img2" class="front_face" src="002.png" alt="" />
-        <img class="back_face" src="back.webp" alt="" />
-      </div>
-      <div class="card">
-        <img id="img3" class="front_face" src="003.png" alt="" />
-        <img class="back_face" src="back.webp" alt="" />
-      </div>
-      <div class="card">
-        <img id="img4" class="front_face" src="001.png" alt="" />
-        <img class="back_face" src="back.webp" alt="" />
-      </div>
-      <div class="card">
-        <img id="img5" class="front_face" src="002.png" alt="" />
-        <img class="back_face" src="back.webp" alt="" />
-      </div>
-      <div class="card">
-        <img id="img6" class="front_face" src="003.png" alt="" />
-        <img class="back_face" src="back.webp" alt="" />
-      </div>
-    </div>
-    <h1 id="gameover" style="display: none"></h1>
-    <button id="restart">Restart</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
