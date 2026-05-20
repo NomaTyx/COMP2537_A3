@@ -1,44 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- import jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="index.js"></script>
-</head>
-
-<body>
-  <div id="game_grid">
-    <div class="card">
-      <img id="img1" class="front_face" src="001.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
+  <body>
+    <div id="header">
+      <h1>Memory Game</h1>
+      Clicks: <span id="clicks">0</span> <br />
+      Pairs remaining: <span id="pairs">3</span> <br />
+      Pairs matched: <span id="matched">0</span> <br />
+      Total pairs: <span id="total">3</span> <br />
+      Difficulty:
+      <button id="easy">Easy</button>
+      <button id="medium" disabled="true">Medium</button>
+      <button id="hard">Hard</button>
+      <br />
+      <span id="timer">0</span> seconds remaining <br />
     </div>
-    <div class="card">
-      <img id="img2" class="front_face" src="002.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
+    <button id="start">Start game</button>
+    <div id="game_grid">
+      <div class="card">
+        <img id="img1" class="front_face" src="001.png" alt="" />
+        <img class="back_face" src="back.webp" alt="" />
+      </div>
+      <div class="card">
+        <img id="img2" class="front_face" src="002.png" alt="" />
+        <img class="back_face" src="back.webp" alt="" />
+      </div>
+      <div class="card">
+        <img id="img3" class="front_face" src="003.png" alt="" />
+        <img class="back_face" src="back.webp" alt="" />
+      </div>
+      <div class="card">
+        <img id="img4" class="front_face" src="001.png" alt="" />
+        <img class="back_face" src="back.webp" alt="" />
+      </div>
+      <div class="card">
+        <img id="img5" class="front_face" src="002.png" alt="" />
+        <img class="back_face" src="back.webp" alt="" />
+      </div>
+      <div class="card">
+        <img id="img6" class="front_face" src="003.png" alt="" />
+        <img class="back_face" src="back.webp" alt="" />
+      </div>
     </div>
-    <div class="card">
-      <img id="img3" class="front_face" src="003.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-    <div class="card">
-      <img id="img4" class="front_face" src="001.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-    <div class="card">
-      <img id="img5" class="front_face" src="002.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-    <div class="card">
-      <img id="img6" class="front_face" src="003.png" alt="">
-      <img class="back_face" src="back.webp" alt="">
-    </div>
-  </div>
-</body>
-
+    <h1 id="gameover" style="display: none"></h1>
+    <button id="restart">Restart</button>
+  </body>
 </html>
