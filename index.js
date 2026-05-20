@@ -64,7 +64,7 @@ async function setup() {
       $("#total").text("4");
       $("#pairs").text("4");
       numPairs = 4;
-      timeRemaining = 50;
+      timeRemaining = 10;
       $("#timer").text(`${timeRemaining}`);
       setup();
     });
