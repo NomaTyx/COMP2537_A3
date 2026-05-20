@@ -15,7 +15,7 @@ async function setup() {
   timeRemaining = startingTime;
   $("#timer").text(`${startingTime}`);
   clearInterval(timeInterval);
-  $("gameover").hide();
+  $("#gameover").hide();
   $("#start").show();
   $("#game_grid").hide();
   $("#game_grid").empty();
@@ -65,7 +65,7 @@ async function setup() {
       $("#total").text("4");
       $("#pairs").text("4");
       numPairs = 4;
-      startingTime = 10;
+      startingTime = 3;
       $("#timer").text(`${startingTime}`);
       setup();
     });
