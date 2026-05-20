@@ -198,6 +198,7 @@ $(document).ready(() => {
       $(".bg-secondary").removeClass("bg-secondary").addClass("bg-white border");
       $(".text-light").removeClass("text-light").addClass("text-dark");
       $("#restart").removeClass("btn-outline-light").addClass("btn-outline-dark");
+      $("#powerup").removeClass("btn-outline-light").addClass("btn-outline-dark");
       $(this).text("☀️ Light").removeClass("btn-outline-light").addClass("btn-outline-dark");
     } else {
       // switch to dark
@@ -205,6 +206,7 @@ $(document).ready(() => {
       $(".bg-white.border").removeClass("bg-white border").addClass("bg-secondary");
       $(".text-dark").removeClass("text-dark").addClass("text-light");
       $("#restart").removeClass("btn-outline-light").addClass("btn-outline-dark");
+      $("#powerup").removeClass("btn-outline-light").addClass("btn-outline-dark");
       $(this).text("🌙 Dark").removeClass("btn-outline-dark").addClass("btn-outline-light");
     }
   });
